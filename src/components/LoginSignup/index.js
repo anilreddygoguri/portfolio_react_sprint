@@ -171,7 +171,7 @@ const LoginSignup = () => {
               <label>
                 <input type="checkbox" /> Remember me
               </label>
-              <a href="#">Forgot Password</a>
+              <button className="register-login-button">Forgot Password</button>
             </div>
             <button type="submit" className="submit-button">Login</button>
             {showLoginError && <p className="error-message">{loginErrorMsg}</p>}

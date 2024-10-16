@@ -1,5 +1,4 @@
 import ProjectCard from '../ProjectCard'
-import Header from '../Header'
 import './projects.css'
 
 const projectsList=[

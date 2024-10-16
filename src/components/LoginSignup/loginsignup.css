@@ -120,6 +120,7 @@ form .submit-button{
     background: transparent;
     font-size:16px;
     color:#fff;
+    cursor: pointer;
 }
 form .register-link{
     font-size:14.5px;
