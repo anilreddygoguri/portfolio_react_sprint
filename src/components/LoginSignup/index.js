@@ -187,9 +187,10 @@ const LoginSignup = () => {
             <div className="register-link">
               <p>
                 Don't have an account?{' '}
-                <a href="javascript:void(0)" onClick={registerLink}>
-                  Register
+                <a href="#" onClick={(e) => { e.preventDefault(); registerLink(); }}>
+               Register
                 </a>
+
               </p>
             </div>
           </form>
@@ -247,9 +248,10 @@ const LoginSignup = () => {
             <div className="register-link">
               <p>
                 Already have an account?{' '}
-                <a href="javascript:void(0)" onClick={loginLink}>
-                  Login
+                <a href="#" onClick={(e) => { e.preventDefault(); loginLink(); }}>
+                    Login
                 </a>
+
               </p>
             </div>
           </form>
