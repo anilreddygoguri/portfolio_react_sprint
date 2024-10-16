@@ -20,7 +20,7 @@ const About=()=>(
             <a href="/AnilResume.pdf" download="Anil_CV"><button className='download-button'>Download CV</button></a>
         </div>
         <div className="about-image-container">
-            <img src={AboutImage} className="about-image"/>
+            <img src={AboutImage} className="about-image" alt="about image"/>
         </div>
     </div>
 </div>
