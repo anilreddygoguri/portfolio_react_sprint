@@ -1,10 +1,8 @@
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
 import { FaUser, FaLock, FaEnvelope } from 'react-icons/fa';
-
-
-import './loginsignup.css'
+import './loginsignup.css';
 
 const LoginSignup = () => {
   const navigate = useNavigate();
@@ -16,24 +14,19 @@ const LoginSignup = () => {
     password: '',
   });
   
-  // Separate error and success states for login and registration
   const [loginErrorMsg, setLoginErrorMsg] = useState('');
   const [registerErrorMsg, setRegisterErrorMsg] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   
-  // Separate error display control for login and registration
   const [showLoginError, setShowLoginError] = useState(false);
   const [showRegisterError, setShowRegisterError] = useState(false);
   
-  // State to control checkbox
   const [showCheckBox, setShowCheckBox] = useState(false);
 
-
   useEffect(() => {
-    // Check if the user is already logged in
     const token = Cookies.get('jwt_token');
     if (token) {
-      navigate('/home'); // Redirect to home if logged in
+      navigate('/home'); 
     }
   }, [navigate]);
 
@@ -60,10 +53,9 @@ const LoginSignup = () => {
     setLoginData({ username: '', password: '' });
   };
 
-  // Reset registration form, including checkbox
   const resetRegisterForm = () => {
     setRegisterData({ username: '', email: '', password: '' });
-    setShowCheckBox(false); // Reset checkbox to unchecked
+    setShowCheckBox(false);
   };
 
   const onLoginSubmitSuccess = (jwtToken) => {
@@ -72,7 +64,7 @@ const LoginSignup = () => {
       path: '/',
     });
     navigate('/home', { replace: true });
-    setShowLoginError(false); // Reset login error state on success
+    setShowLoginError(false);
   };
 
   const onLoginSubmitFailure = (errorMessage) => {
@@ -112,7 +104,7 @@ const LoginSignup = () => {
       onLoginSubmitFailure('An error occurred during login. Please try again.');
     }
 
-    resetLoginForm(); // Clear login form
+    resetLoginForm();
   };
 
   const handleRegisterSubmit = async (e) => {
@@ -131,8 +123,8 @@ const LoginSignup = () => {
 
       const result = await response.json();
       if (response.ok) {
-        setSuccessMessage(result.register_msg); // Display success message
-        setShowRegisterError(false); // Hide error message
+        setSuccessMessage(result.register_msg);
+        setShowRegisterError(false);
       } else {
         onRegisterSubmitFailure(result.register_msg);
       }
@@ -140,12 +132,11 @@ const LoginSignup = () => {
       onRegisterSubmitFailure('An error occurred during registration. Please try again.');
     }
 
-    resetRegisterForm(); // Reset form, including checkbox
+    resetRegisterForm();
   };
 
-  // Handle checkbox state change
   const handleCheckBoxChange = () => {
-    setShowCheckBox(!showCheckBox); // Toggle checkbox state
+    setShowCheckBox(!showCheckBox);
   };
 
   return (
@@ -182,15 +173,14 @@ const LoginSignup = () => {
               </label>
               <a href="#">Forgot Password</a>
             </div>
-            <button type="submit">Login</button>
+            <button type="submit" className="submit-button">Login</button>
             {showLoginError && <p className="error-message">{loginErrorMsg}</p>}
             <div className="register-link">
               <p>
                 Don't have an account?{' '}
-                <a href="#" onClick={(e) => { e.preventDefault(); registerLink(); }}>
-               Register
-                </a>
-
+                <button type="button" onClick={registerLink} className="register-login-button">
+                  Register
+                </button>
               </p>
             </div>
           </form>
@@ -242,16 +232,15 @@ const LoginSignup = () => {
                 /> I agree to the terms & conditions
               </label>
             </div>
-            <button type="submit">Register</button>
+            <button type="submit" className="submit-button">Register</button>
             {successMessage && <p className="success-message">{successMessage}</p>}
             {showRegisterError && <p className="error-message">{registerErrorMsg}</p>}
             <div className="register-link">
               <p>
                 Already have an account?{' '}
-                <a href="#" onClick={(e) => { e.preventDefault(); loginLink(); }}>
-                    Login
-                </a>
-
+                <button type="button" onClick={loginLink} className="register-login-button">
+                  Login
+                </button>
               </p>
             </div>
           </form>

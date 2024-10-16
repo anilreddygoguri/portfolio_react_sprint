@@ -103,7 +103,7 @@ form .remember-forgot{
     text-decoration: underline;
 }
 
-form button{
+form .submit-button{
     width:100%;
     height:45px;
     background: #fff;
@@ -114,6 +114,12 @@ form button{
     cursor:pointer;
     color:#333;
     font-weight:700;
+}
+.register-login-button{
+    border:none;
+    background: transparent;
+    font-size:16px;
+    color:#fff;
 }
 form .register-link{
     font-size:14.5px;
