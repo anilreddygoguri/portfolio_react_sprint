@@ -1,0 +1,83 @@
+.project-card-container{
+    width:300px;
+    border: 1px solid #0000002c;
+    border-radius: 3px;
+    margin: 6px 6px 28px;
+    transition: all .3s ease;
+    padding-bottom:10px;
+    line-height:2rem;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.project-card-container:hover{
+    box-shadow:3px 3px 5px rgba(0,0,0,0.1);
+}
+.project-image{
+    height: 200px;
+    width: 100%;
+}
+.text-container{
+    padding:4px 20px;
+}
+.project-heading{
+    font-size:20px;
+
+}
+.tech-li-container{
+    list-style-type: none;
+    display:flex;
+    flex-wrap: wrap;
+}
+.tech-item{
+    background-color: #00000012;
+    border-radius: 50px;
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 410;
+    height: 30px;
+    margin-right: 10px;
+    min-width: 50px;
+    padding:8px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    margin-bottom:10px;
+}
+.buttons-container{
+    display: flex;
+}
+.visit-button{
+    padding:5px 10px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 3px;
+    color: #000;
+    cursor: pointer;
+    font-weight: 450;
+    transition: all .3s ease;
+    margin-right:6px;
+}
+.code-button{
+    padding:5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 450;
+    transition: all .3s ease;
+    margin-left:6px;
+}
+.code-button, .visit-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+@media scree and (max-width:465px){
+    .project-card-container{
+        width:200px;
+    }
+    .project-image{
+      height:100px;
+    }
+}

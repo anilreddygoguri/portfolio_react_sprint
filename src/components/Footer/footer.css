@@ -1,0 +1,21 @@
+footer{
+    background-color: #000;
+    margin-top: 60px;
+}
+.footer-button{
+    background-color: #64626255;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: Roboto;
+    height: 40px;
+    width: 100%;
+}
+.copyright {
+    color: #ffffff7a;
+    font-family: Roboto;
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 20px 5px;
+    text-align: center;
+}

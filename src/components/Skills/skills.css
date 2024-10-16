@@ -1,0 +1,120 @@
+.skills-section{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    padding:40px 60px;
+   
+}
+.skills-heading-container{
+    text-align: center;
+    align-self:flex-start;
+    padding:6px;
+    border-bottom: 3px solid rgb(67, 11, 171);
+    border-top:3px solid rgb(67, 11, 171);
+    margin:30px 0px;
+}
+.skills-heading-text{
+    font-size:40px;
+    font-weight:bold;
+}
+
+.skills-container{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+}
+.skills-name-text{
+    font-size:22px;
+    margin-bottom:10px;
+}
+.skills-icons-container{
+    list-style-type: none;
+    display:flex;
+    flex-wrap: wrap;
+}
+.skill-icon{
+    width:150px;
+    height:150px;
+    border:1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:10px;
+}
+.html,.css,.bs,.js,.react, .py,.node,.sql,.github{
+    font-size:50px;
+    margin-bottom:10px;
+
+}
+.html{
+    color:#e26526;
+}
+.css{
+    color:#7d7deb;
+}
+.bs{
+    color:#a71da7;
+}
+.js{
+    color:#f0db4f;
+}
+.react{
+    color:#99c6f7;
+}
+.py{
+ color:#39392d;
+}
+.node{
+color:#1ab11a;
+}
+.sql{
+    color:#8a8484;
+}
+.github{
+    color:#000000;;
+
+}
+@media screen and (max-width:765px){
+    .skills-section{
+        padding:40px 40px;
+
+    }
+    .html,.css,.bs,.js,.react, .py,.node,.sql,.github{
+        font-size:40px;
+        margin-bottom:6px;
+    
+    }
+    .skills-heading-container{
+        align-self: center;
+    }
+    .skills-heading-text{
+        font-size:34px;
+    }
+    .skill-name{
+        font-size:14px;
+    }
+   
+
+@media screen and (max-width:465px){
+    .skill-icon{
+        width:80px;
+        height:80px;
+    }
+    .html,.css,.bs,.js,.react, .py,.node,.sql,.github{
+        font-size:22px;
+        margin-bottom:6px;
+    
+    }
+    .skills-name-text{
+        font-size:18px;
+        align-self:center;
+
+    }
+    .skills-icons-container{
+        justify-content: center;
+        align-items: center;
+    }
+}
+}

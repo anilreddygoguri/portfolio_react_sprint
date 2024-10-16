@@ -1,0 +1,80 @@
+#home{
+    padding-top:60px;
+}
+.hero-section{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding:40px 60px;
+
+}
+.name-profile-container{
+    width:100%;
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+
+}
+.hero-image{
+    width:fit-content;
+    border-radius:50%;
+
+}
+.names-container{
+    padding:20px;
+    line-height:4rem;
+    text-align:center;
+   
+ 
+}
+.hero-text,.hero-name{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.hello-text{
+    color: #781129;
+    font-family: "Qwitcher Grypen", cursive;
+    font-size: 70px;
+}
+.hero-name{
+    font-size:50px;
+}
+.role{
+ font-size:24px;
+ color:#215898;
+ font-weight:bold;
+}
+.linkedin-icon{
+    font-size:34px;
+    margin-right:10px;
+    color:#0072b1;
+}
+.github-icon{
+    font-size:34px;
+    margin-right:10px;
+    color:black;  
+    margin-left:10px;
+}
+@media screen and (max-width:765px){
+    .name-profile-container{
+        flex-direction:column;
+    }
+    .hero-image{
+        height:230px;
+        width:230px;
+    }
+    .hero-name{
+        font-size:34px;
+    }
+    .role{
+        font-size:16px;
+    }
+    .names-container{
+        margin-left:0px;
+        line-height:3rem;
+    }
+
+    
+}
