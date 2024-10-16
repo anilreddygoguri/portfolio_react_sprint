@@ -187,7 +187,7 @@ const LoginSignup = () => {
             <div className="register-link">
               <p>
                 Don't have an account?{' '}
-                <a href="#" onClick={registerLink}>
+                <a href="javascript:void(0)" onClick={registerLink}>
                   Register
                 </a>
               </p>
@@ -247,7 +247,7 @@ const LoginSignup = () => {
             <div className="register-link">
               <p>
                 Already have an account?{' '}
-                <a href="#" onClick={loginLink}>
+                <a href="javascript:void(0)" onClick={loginLink}>
                   Login
                 </a>
               </p>
